@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root{
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+body{
+    font-size: 0.9375em;
+    font-family: 'Overpass', sans-serif;
+    margin: 0;
+    background-color: var(--very-dark-blue);
+    color: var(--white);
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+.centerItems{
+    align-items: center;
+}
+
+.splitItems{
+    justify-content: space-between;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.light-txt{
+    color: var(--light-grey);
+}
+
+.hide{
+    display: none;
+}
+
+.txt-center{
+    text-align: center;
+}
+
+.rating-container{
+    background-color:hsl(213, 19%, 12%);
+    width: min(400px, 70%);
+    margin: 200px auto;
+    padding: 30px;
+    border-radius: 30px;
+}
+
+@media only screen and (max-width: 400px) {
+    .rating-container{
+        padding: 7%;
+    }
+}
+
+.circle{
+    border-radius: 100%;
+    background-color: var(--dark-blue);
+    width: 15%;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#rate-buttons{
+    margin: 30px 0;
+}
+
+.rate-button, button{
+    transition: background-color .3s, scale .3s, border-radius .3s;
+}
+
+.rate-button:hover{
+    cursor: pointer;
+    background-color: var(--medium-grey);
+    scale: 1.1;
+}
+
+.selected{
+    background-color: var(--orange) !important;
+    animation: select .5s forwards;
+}
+
+@keyframes select{
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+button{
+    width: 100%;
+    height: 40px;
+    border-radius: 30px;
+    border:none;
+    background-color: var(--orange);
+    color: var(--white);
+    letter-spacing: 2px;
+}
+
+button:hover{
+    background-color: var(--white);
+    color: orange;
+    scale: 1.03 1.1;
+    border-radius: 10px;
+}
+
+/* THANK YOU */
+
+.animate-scale{
+    animation: scale .5s forwards;
+}
+
+@keyframes scale {
+    from{
+        scale: 0.6;
+    }
+    to{
+        scale: 1;
+    }
+}
+
+#result{
+    margin-top: 30px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: var(--dark-blue);
+    color: var(--orange);
+}

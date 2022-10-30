@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="rating-container">
+    <div class="circle">
+      <img src="images/icon-star.svg" alt="star">
+    </div>
+    <h1>How did we do?</h1>
+    <p class="light-txt">Please let us know how we did with your support request. 
+      All feedback is appreciated to help us improve our offering!</p>
+    <div id="rate-buttons" class="row splitItems">
+      <span class="circle rate-button">1</span>
+      <span class="circle rate-button">2</span>
+      <span class="circle rate-button">3</span>
+      <span class="circle rate-button">4</span>
+      <span class="circle rate-button">5</span>
+    </div>
+    <button id="submit">SUBMIT</button>
+  </div>
+
+  <div class="rating-container column centerItems hide">
+    <img src="images/illustration-thank-you.svg" alt="thank you">
+    <p id="result">You selected ? out of 5</p>
+    <h1 class="animate-scale">Thank you!</h1>
+    <p class="light-txt txt-center">We appreciate you taking the time to give a rating. If you ever need more support, 
+      don’t hesitate to get in touch!</p>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
